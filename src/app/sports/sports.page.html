@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sports</ion-title>
+  </ion-toolbar>
+  <!-- creat button to dierct to other page -->
+  <ion-button [routerLink]="['/home']">back Home</ion-button>
+  <ion-button [routerLink]="['/health']">health</ion-button>
+  <ion-button [routerLink]="['/business']">business</ion-button>
+  <ion-button [routerLink]="['/science']">science</ion-button>
+  <ion-button [routerLink]="['/entertainment']">entertainment</ion-button>
+  <ion-button [routerLink]="['/technology']">technology</ion-button>
+</ion-header>
+
+<ion-content>
+<!--only show sports News-->
+<!-- creating list to show out put the data array theat been call from the API -->
+<!--the data holad title and img and the news content-->
+  <ul>
+    <li *ngFor="let dataa of spor">
+      <h2>{{dataa.title}}</h2>
+      <img src="{{dataa.urlToImage}}">
+      <p>{{dataa.content}}</p>
+    </li>
+  </ul>
+
+</ion-content>

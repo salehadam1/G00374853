@@ -1,20 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      News
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<!--Mobile Applications Development-->
+<!--      GMIT                   -->
+<!--ID : G00374853               -->
+<!--THE PROJECT ABOUT HTE NEWS-->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!--css for the size of the grid hand background color-->
+<!-- hover when the user selec the background change to blue-->
+<style>
+  ion-col > div 
+  {
+    background-color: #f7f7f7;
+    border: solid 1px #ddd;
+    padding: 10px;
+  }
+  div:hover
+  {
+    background-color: blue !important;
+  }
+</style>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<!-- -->
+<ion-content  [fullscreen]="true">
+  <!--grid hold 3 row and each row have 2 col -->
+  <!--each col have text which link user to text news page -->
+    <ion-grid>
+      <ion-row>
+        <ion-col [routerLink]="['/health']">
+          <!--div just for change the background color when the user hover on it-->
+          <div>
+            <h1>health</h1>
+           </div>
+         </ion-col>
+
+        <ion-col [routerLink]="['/sports']">
+         <div>
+           <h1>Sport News</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col [routerLink]="['/business']">
+        <div><h1>Business News</h1></div>
+        </ion-col>
+        <ion-col [routerLink]="['/entertainment']">
+        <div><h1>entertainment News</h1></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col [routerLink]="['/science']">
+        <div> <h1>Science News</h1></div>
+        </ion-col>
+        <ion-col [routerLink]="['/technology']">
+        <div> <h1>technology News</h1></div>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
 </ion-content>
+
